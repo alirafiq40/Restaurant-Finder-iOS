@@ -1,0 +1,12 @@
+PODS:
+  - LocationPicker (0.6.0)
+
+DEPENDENCIES:
+  - LocationPicker (~> 0.6)
+
+SPEC CHECKSUMS:
+  LocationPicker: 93ea916c48fef7b561fc4ecc2457cbb4ac58d7cf
+
+PODFILE CHECKSUM: ffb5086d15687ab856f59f791c212758df93b113
+
+COCOAPODS: 1.0.0
