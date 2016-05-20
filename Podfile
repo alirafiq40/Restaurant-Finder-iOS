@@ -6,6 +6,6 @@ target 'Restaurant Finder' do
   use_frameworks!
 
   # Pods for Restaurant Finder
-  pod 'LocationPicker', '~> 0.6'
+  pod 'GoogleMaps'
   
 end

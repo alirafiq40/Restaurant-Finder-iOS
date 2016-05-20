@@ -1,12 +1,12 @@
 PODS:
-  - LocationPicker (0.6.0)
+  - GoogleMaps (1.13.2)
 
 DEPENDENCIES:
-  - LocationPicker (~> 0.6)
+  - GoogleMaps
 
 SPEC CHECKSUMS:
-  LocationPicker: 93ea916c48fef7b561fc4ecc2457cbb4ac58d7cf
+  GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
 
-PODFILE CHECKSUM: ffb5086d15687ab856f59f791c212758df93b113
+PODFILE CHECKSUM: 801867fa4b0d7e5e4a7d529f80a57fef67e1277f
 
 COCOAPODS: 1.0.0

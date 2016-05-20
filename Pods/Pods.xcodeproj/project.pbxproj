@@ -7,84 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1BD2E658E0E3EBADEDE1F9749573B9 /* Pods-Restaurant Finder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FB26A218AB635CE54840AE00F988EF /* Pods-Restaurant Finder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3EF4DABE71F29CA4732A1FC3CB2A5F1E /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE8B007B4C30493F710BEA39592E08 /* SearchHistoryManager.swift */; };
-		47B72CB5DD77887CA83B681B027EAAEB /* LocationPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5675EE42C7664EB030B8071D7F74D35 /* LocationPicker-dummy.m */; };
-		5E537AB52201632D666F0B532A33FDED /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AA2777E676D35241CC4ECECC6EE4D2 /* Location.swift */; };
-		7DAE23E74D418D29DFE7AFFAC3E77D8C /* Pods-Restaurant Finder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E149544D649E6D4666215FBD3BE6544 /* Pods-Restaurant Finder-dummy.m */; };
-		91C726776A94AB9202DA7AFDB607D81D /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869177113CE73F16868F35F823C5167D /* LocationPickerViewController.swift */; };
-		AFE2EB2D2524A791921ED1A8EBA1C750 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		C6F29902DF2FCA6A882E84540216BBAF /* LocationSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF7B8B9EE805C9070FF8F36D4C265B /* LocationSearchResultsViewController.swift */; };
-		DB63F7100D326C2EA7DD19FF66AEFBE8 /* LocationPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A094A2114253F4ED24287C196195AF /* LocationPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0993AB7C5F2B57A98D11549A7DC713B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4427324A69472417AA2D4BCA67457D /* Images.xcassets */; };
-		ED61AF84E0DC7AFEC2877F043622F549 /* LocationPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E55E172560EDD40B8D3DD6E8A4DDAA3C /* LocationPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F31070F679265BCB9DE8CBCB66B05BB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		578337CFDB371B8098B344E842B3F856 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		C7476401C41F95037E797302D2B5BDED /* Pods-Restaurant Finder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E149544D649E6D4666215FBD3BE6544 /* Pods-Restaurant Finder-dummy.m */; };
+		E73AD59B1B9DC3900991DAFEA205E4C2 /* Pods-Restaurant Finder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FB26A218AB635CE54840AE00F988EF /* Pods-Restaurant Finder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		81EE15330BECCCAEECCE4980A3BD5F9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 787F90EE7A798FA89036E7FD103A63FF;
-			remoteInfo = LocationPicker;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		015F83403CD3343B326341C11D0F233E /* Pods-Restaurant Finder-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Restaurant Finder-acknowledgements.markdown"; sourceTree = "<group>"; };
-		07BE8B007B4C30493F710BEA39592E08 /* SearchHistoryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchHistoryManager.swift; path = LocationPicker/SearchHistoryManager.swift; sourceTree = "<group>"; };
+		069D77947AE65461D79575445AD8AB07 /* Pods_Restaurant_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurant_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2F683AD82D3E2C929E2CA7A20B2AB1 /* Pods-Restaurant Finder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Restaurant Finder.modulemap"; sourceTree = "<group>"; };
 		11FB26A218AB635CE54840AE00F988EF /* Pods-Restaurant Finder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Restaurant Finder-umbrella.h"; sourceTree = "<group>"; };
-		24ED327BD655CE3431B39DDD37D3D084 /* LocationPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocationPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		415D763B9E541BCA3CA6934449AA6DED /* LocationPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LocationPicker.modulemap; sourceTree = "<group>"; };
+		213B1724C62BE8BC65F92A9BC1A24B5B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		4274AEE265D99F0FADB744320623998A /* Pods-Restaurant Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaurant Finder.release.xcconfig"; sourceTree = "<group>"; };
 		6E149544D649E6D4666215FBD3BE6544 /* Pods-Restaurant Finder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Restaurant Finder-dummy.m"; sourceTree = "<group>"; };
-		869177113CE73F16868F35F823C5167D /* LocationPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationPickerViewController.swift; path = LocationPicker/LocationPickerViewController.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DEFFBF62F1BB2960D29795B18D98ECC /* LocationPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LocationPicker-prefix.pch"; sourceTree = "<group>"; };
+		9E17161130B27DB46F01569D1C6C5443 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		9EB99AE3CCEB2CCA9F61634FB84DDEB2 /* Pods-Restaurant Finder-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Restaurant Finder-resources.sh"; sourceTree = "<group>"; };
 		AD841064716577F6538E77504455E4CF /* Pods-Restaurant Finder-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Restaurant Finder-acknowledgements.plist"; sourceTree = "<group>"; };
-		B0E0A5EF4D030A37834C4342CF281856 /* LocationPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LocationPicker.xcconfig; sourceTree = "<group>"; };
-		B5675EE42C7664EB030B8071D7F74D35 /* LocationPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LocationPicker-dummy.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D0A094A2114253F4ED24287C196195AF /* LocationPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LocationPicker.h; path = LocationPicker/LocationPicker.h; sourceTree = "<group>"; };
-		DA4427324A69472417AA2D4BCA67457D /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LocationPicker/Images.xcassets; sourceTree = "<group>"; };
 		DF15F8DBBACAE50F084357B189ED2912 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF3D6E211746061FFC5CEE721D9396BA /* Pods-Restaurant Finder-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Restaurant Finder-frameworks.sh"; sourceTree = "<group>"; };
 		E2F46E89BD3FF5FE9CD3AA15765F483A /* Pods-Restaurant Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaurant Finder.debug.xcconfig"; sourceTree = "<group>"; };
-		E55E172560EDD40B8D3DD6E8A4DDAA3C /* LocationPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LocationPicker-umbrella.h"; sourceTree = "<group>"; };
-		E8DF7B8B9EE805C9070FF8F36D4C265B /* LocationSearchResultsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationSearchResultsViewController.swift; path = LocationPicker/LocationSearchResultsViewController.swift; sourceTree = "<group>"; };
-		EA82901B1AC59DF1D933580EE21CD191 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AA2777E676D35241CC4ECECC6EE4D2 /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Location.swift; path = LocationPicker/Location.swift; sourceTree = "<group>"; };
-		FF5D5B84A88661A0A523AE79436F1AB6 /* Pods_Restaurant_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurant_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		83CF56B008D3E0590E5B2ABD5AA40A04 /* Frameworks */ = {
+		D2D81C6F64DCE9AE5B09ED3B763154B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE2EB2D2524A791921ED1A8EBA1C750 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F98C976A1A6DFA13DF7EF457CFBBF9B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F31070F679265BCB9DE8CBCB66B05BB7 /* Foundation.framework in Frameworks */,
+				578337CFDB371B8098B344E842B3F856 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C7DE81A8B682E4FA1C8AE84E6DB75B6 /* Products */ = {
+		040F2E0A21F8D1D0E1BF8432091D9BA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24ED327BD655CE3431B39DDD37D3D084 /* LocationPicker.framework */,
-				FF5D5B84A88661A0A523AE79436F1AB6 /* Pods_Restaurant_Finder.framework */,
+				069D77947AE65461D79575445AD8AB07 /* Pods_Restaurant_Finder.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,18 +58,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3F32532CD38B20CA8E2962CB72D10B8A /* LocationPicker */ = {
+		552C04C99B9EC7FD6897DEAA23CA97B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F8AA2777E676D35241CC4ECECC6EE4D2 /* Location.swift */,
-				D0A094A2114253F4ED24287C196195AF /* LocationPicker.h */,
-				869177113CE73F16868F35F823C5167D /* LocationPickerViewController.swift */,
-				E8DF7B8B9EE805C9070FF8F36D4C265B /* LocationSearchResultsViewController.swift */,
-				07BE8B007B4C30493F710BEA39592E08 /* SearchHistoryManager.swift */,
-				A38DDB7D163C0735C138805BD86325EB /* Resources */,
-				B298A3B9CFDF595F2C227BC1CEB701DE /* Support Files */,
+				213B1724C62BE8BC65F92A9BC1A24B5B /* GoogleMaps.framework */,
 			);
-			path = LocationPicker;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B9DDBFD34805D0CECB3FE7AA6B7B594 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAA2E410E8C08C05E23E73307973F577 /* GoogleMaps */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -116,40 +79,27 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B4492C123A456579C930A575F620536A /* Pods */,
-				0C7DE81A8B682E4FA1C8AE84E6DB75B6 /* Products */,
+				6B9DDBFD34805D0CECB3FE7AA6B7B594 /* Pods */,
+				040F2E0A21F8D1D0E1BF8432091D9BA6 /* Products */,
 				CC7D094E1C46B4E91E4560D1E50CA4C7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A38DDB7D163C0735C138805BD86325EB /* Resources */ = {
+		AAA2E410E8C08C05E23E73307973F577 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				DA4427324A69472417AA2D4BCA67457D /* Images.xcassets */,
+				552C04C99B9EC7FD6897DEAA23CA97B2 /* Frameworks */,
+				BA6CC55F7C3DC98EA32DB381E76D8A4B /* Resources */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		BA6CC55F7C3DC98EA32DB381E76D8A4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E17161130B27DB46F01569D1C6C5443 /* GoogleMaps.bundle */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		B298A3B9CFDF595F2C227BC1CEB701DE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EA82901B1AC59DF1D933580EE21CD191 /* Info.plist */,
-				415D763B9E541BCA3CA6934449AA6DED /* LocationPicker.modulemap */,
-				B0E0A5EF4D030A37834C4342CF281856 /* LocationPicker.xcconfig */,
-				B5675EE42C7664EB030B8071D7F74D35 /* LocationPicker-dummy.m */,
-				9DEFFBF62F1BB2960D29795B18D98ECC /* LocationPicker-prefix.pch */,
-				E55E172560EDD40B8D3DD6E8A4DDAA3C /* LocationPicker-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LocationPicker";
-			sourceTree = "<group>";
-		};
-		B4492C123A456579C930A575F620536A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3F32532CD38B20CA8E2962CB72D10B8A /* LocationPicker */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -189,60 +139,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A0236B5B2B4F33CCEEEDF81C11BBCC75 /* Headers */ = {
+		64A7D74599F646A65638B34678D121FB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C1BD2E658E0E3EBADEDE1F9749573B9 /* Pods-Restaurant Finder-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B15140E45902CD1CFCAC1D35D2AC84FD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED61AF84E0DC7AFEC2877F043622F549 /* LocationPicker-umbrella.h in Headers */,
-				DB63F7100D326C2EA7DD19FF66AEFBE8 /* LocationPicker.h in Headers */,
+				E73AD59B1B9DC3900991DAFEA205E4C2 /* Pods-Restaurant Finder-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5EDE9667BF7CBC9BADFB45890AC06AC4 /* Pods-Restaurant Finder */ = {
+		269F44C1891DB1A8BAE36835314B2104 /* Pods-Restaurant Finder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F97543621E9E850883C42AADAB862146 /* Build configuration list for PBXNativeTarget "Pods-Restaurant Finder" */;
+			buildConfigurationList = E6AB1884AEE272F4577BC101321C6F5F /* Build configuration list for PBXNativeTarget "Pods-Restaurant Finder" */;
 			buildPhases = (
-				F861E861E269E2E76AEE73D1058D610B /* Sources */,
-				83CF56B008D3E0590E5B2ABD5AA40A04 /* Frameworks */,
-				A0236B5B2B4F33CCEEEDF81C11BBCC75 /* Headers */,
+				6D4AF284E7BA54BC15017805B8563BB1 /* Sources */,
+				D2D81C6F64DCE9AE5B09ED3B763154B5 /* Frameworks */,
+				64A7D74599F646A65638B34678D121FB /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				50D78DA9AA38FF73285F515A67DD1ADF /* PBXTargetDependency */,
 			);
 			name = "Pods-Restaurant Finder";
 			productName = "Pods-Restaurant Finder";
-			productReference = FF5D5B84A88661A0A523AE79436F1AB6 /* Pods_Restaurant_Finder.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		787F90EE7A798FA89036E7FD103A63FF /* LocationPicker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D6D21DFF42E1BD7BB3C56A46AE99F634 /* Build configuration list for PBXNativeTarget "LocationPicker" */;
-			buildPhases = (
-				743380D892371EF5D7B003976C1CBAA4 /* Sources */,
-				9F98C976A1A6DFA13DF7EF457CFBBF9B /* Frameworks */,
-				B15140E45902CD1CFCAC1D35D2AC84FD /* Headers */,
-				02C74DBE7B5AE82E45EB6C8945146787 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LocationPicker;
-			productName = LocationPicker;
-			productReference = 24ED327BD655CE3431B39DDD37D3D084 /* LocationPicker.framework */;
+			productReference = 069D77947AE65461D79575445AD8AB07 /* Pods_Restaurant_Finder.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -262,58 +184,25 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0C7DE81A8B682E4FA1C8AE84E6DB75B6 /* Products */;
+			productRefGroup = 040F2E0A21F8D1D0E1BF8432091D9BA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				787F90EE7A798FA89036E7FD103A63FF /* LocationPicker */,
-				5EDE9667BF7CBC9BADFB45890AC06AC4 /* Pods-Restaurant Finder */,
+				269F44C1891DB1A8BAE36835314B2104 /* Pods-Restaurant Finder */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		02C74DBE7B5AE82E45EB6C8945146787 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0993AB7C5F2B57A98D11549A7DC713B /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		743380D892371EF5D7B003976C1CBAA4 /* Sources */ = {
+		6D4AF284E7BA54BC15017805B8563BB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E537AB52201632D666F0B532A33FDED /* Location.swift in Sources */,
-				47B72CB5DD77887CA83B681B027EAAEB /* LocationPicker-dummy.m in Sources */,
-				91C726776A94AB9202DA7AFDB607D81D /* LocationPickerViewController.swift in Sources */,
-				C6F29902DF2FCA6A882E84540216BBAF /* LocationSearchResultsViewController.swift in Sources */,
-				3EF4DABE71F29CA4732A1FC3CB2A5F1E /* SearchHistoryManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F861E861E269E2E76AEE73D1058D610B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7DAE23E74D418D29DFE7AFFAC3E77D8C /* Pods-Restaurant Finder-dummy.m in Sources */,
+				C7476401C41F95037E797302D2B5BDED /* Pods-Restaurant Finder-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		50D78DA9AA38FF73285F515A67DD1ADF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LocationPicker;
-			target = 787F90EE7A798FA89036E7FD103A63FF /* LocationPicker */;
-			targetProxy = 81EE15330BECCCAEECCE4980A3BD5F9A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		034014829C1E4434983CF3A690C12017 /* Debug */ = {
@@ -358,70 +247,7 @@
 			};
 			name = Debug;
 		};
-		52EBC4FD0564253D91247E74CB087E89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2F46E89BD3FF5FE9CD3AA15765F483A /* Pods-Restaurant Finder.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Restaurant Finder/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Restaurant Finder/Pods-Restaurant Finder.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Restaurant_Finder;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7F505E61467A4108A41CA817DC0176FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0E0A5EF4D030A37834C4342CF281856 /* LocationPicker.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LocationPicker/LocationPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LocationPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LocationPicker/LocationPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LocationPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BC87CB00DA1ABAF73E0B76CAB7B1BFD4 /* Release */ = {
+		3D5CD2FA411137141654F3111528538B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4274AEE265D99F0FADB744320623998A /* Pods-Restaurant Finder.release.xcconfig */;
 			buildSettings = {
@@ -453,6 +279,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		7F5807369C1854641792CDBC9163515A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F46E89BD3FF5FE9CD3AA15765F483A /* Pods-Restaurant Finder.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Restaurant Finder/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Restaurant Finder/Pods-Restaurant Finder.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Restaurant_Finder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -492,36 +351,6 @@
 			};
 			name = Release;
 		};
-		E7E0659AF3C63C78271F74D5169458D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0E0A5EF4D030A37834C4342CF281856 /* LocationPicker.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LocationPicker/LocationPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LocationPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LocationPicker/LocationPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LocationPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -534,20 +363,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6D21DFF42E1BD7BB3C56A46AE99F634 /* Build configuration list for PBXNativeTarget "LocationPicker" */ = {
+		E6AB1884AEE272F4577BC101321C6F5F /* Build configuration list for PBXNativeTarget "Pods-Restaurant Finder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7E0659AF3C63C78271F74D5169458D7 /* Debug */,
-				7F505E61467A4108A41CA817DC0176FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F97543621E9E850883C42AADAB862146 /* Build configuration list for PBXNativeTarget "Pods-Restaurant Finder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52EBC4FD0564253D91247E74CB087E89 /* Debug */,
-				BC87CB00DA1ABAF73E0B76CAB7B1BFD4 /* Release */,
+				7F5807369C1854641792CDBC9163515A /* Debug */,
+				3D5CD2FA411137141654F3111528538B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
