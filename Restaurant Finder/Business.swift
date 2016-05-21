@@ -109,6 +109,7 @@ class Business: NSObject {
         reviewCount = dictionary["review_count"] as? NSNumber
     }
     
+    
     class func businesses(array array: [NSDictionary]) -> [Business] {
         var businesses = [Business]()
         for dictionary in array {
