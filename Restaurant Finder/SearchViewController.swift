@@ -43,6 +43,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.text = "San Jose Downtown (Default location)"
         nameLabel.textColor = UIColor.whiteColor()
+        nameLabel.font = UIFont(name: "HelveticaNeue", size: 19.0)
         nameLabel.backgroundColor = view.tintColor
         let topConstraintForNameLabel = nameLabel.topAnchor.constraintEqualToAnchor(segmentedControl.bottomAnchor, constant: 24)
         let leadingConstraintForNameLabel = nameLabel.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor)
@@ -56,6 +57,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         addressLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         addressLabel.numberOfLines = 0
         addressLabel.textColor = view.tintColor
+        addressLabel.font = UIFont(name: "HelveticaNeue", size: 19.0)
+        addressLabel.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         let topConstraintForAddressLabel = addressLabel.topAnchor.constraintEqualToAnchor(nameLabel.bottomAnchor, constant: 16)
         let leadingConstraintForAddressLabel = addressLabel.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor)

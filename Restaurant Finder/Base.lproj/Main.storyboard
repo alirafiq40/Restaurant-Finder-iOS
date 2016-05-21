@@ -438,7 +438,18 @@
                     <view key="view" contentMode="scaleToFill" id="7BG-fy-DMX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-icons" translatesAutoresizingMaskIntoConstraints="NO" id="N6J-u4-EYW">
+                                <rect key="frame" x="-4" y="64" width="383" height="554"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N6J-u4-EYW" firstAttribute="leading" secondItem="7BG-fy-DMX" secondAttribute="leadingMargin" constant="-20" id="XYu-D5-HiJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N6J-u4-EYW" secondAttribute="trailing" constant="-20" id="oEP-4I-l54"/>
+                            <constraint firstItem="N6J-u4-EYW" firstAttribute="top" secondItem="NeP-KE-vrP" secondAttribute="bottom" id="qcW-Y8-M6V"/>
+                            <constraint firstItem="Vtl-Ew-uJp" firstAttribute="top" secondItem="N6J-u4-EYW" secondAttribute="bottom" id="tsO-ki-Tg4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tWX-ee-fCP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -470,6 +481,7 @@
     <resources>
         <image name="Christmas Star-50" width="25" height="25"/>
         <image name="Restaurant-50" width="25" height="25"/>
+        <image name="food-icons" width="202" height="300"/>
         <image name="star" width="42" height="42"/>
     </resources>
 </document>
