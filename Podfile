@@ -7,5 +7,7 @@ target 'Restaurant Finder' do
 
   # Pods for Restaurant Finder
   pod 'GoogleMaps'
-  
+  pod 'AFNetworking', '~> 2.5'
+  pod 'BDBOAuth1Manager'
+  pod 'LinearProgressBar', :git => 'https://github.com/PhilippeBoisney/LinearProgressBar.git'
 end

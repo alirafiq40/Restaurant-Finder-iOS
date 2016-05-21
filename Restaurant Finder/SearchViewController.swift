@@ -16,6 +16,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     var placePicker: GMSPlacePicker?
     var nameLabel = UILabel()
     var addressLabel = UILabel()
+    var pickedLocation: String?
     
     override func loadView() {
         super.loadView()
@@ -28,7 +29,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         view.addSubview(segmentedControl)
         
         let margins = view.layoutMarginsGuide
-        let topConstraint = segmentedControl.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 8)
+        let topConstraint = segmentedControl.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 16)
         let leadingConstraint = segmentedControl.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor)
         let trailingConstraint = segmentedControl.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor)
         
@@ -42,7 +43,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         nameLabel.text = "San Jose Downtown (Default location)"
         nameLabel.textColor = UIColor.whiteColor()
         nameLabel.backgroundColor = view.tintColor
-        let topConstraintForNameLabel = nameLabel.topAnchor.constraintEqualToAnchor(segmentedControl.bottomAnchor, constant: 16)
+        let topConstraintForNameLabel = nameLabel.topAnchor.constraintEqualToAnchor(segmentedControl.bottomAnchor, constant: 24)
         let leadingConstraintForNameLabel = nameLabel.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor)
         let trailingConstraintForNameLabel = nameLabel.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor)
         topConstraintForNameLabel.active = true
@@ -55,7 +56,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         addressLabel.numberOfLines = 0
         addressLabel.textColor = view.tintColor
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
-        let topConstraintForAddressLabel = addressLabel.topAnchor.constraintEqualToAnchor(nameLabel.bottomAnchor, constant: 8)
+        let topConstraintForAddressLabel = addressLabel.topAnchor.constraintEqualToAnchor(nameLabel.bottomAnchor, constant: 16)
         let leadingConstraintForAddressLabel = addressLabel.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor)
         let trailingConstraintForAddressLabel = addressLabel.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor)
         topConstraintForAddressLabel.active = true
@@ -70,11 +71,50 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         
         // add `place` icon in the navigation bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_location_on"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(SearchViewController.locationButtonClicked))
+        
+        // add the search bar in navigation bar
+        searchBar.placeholder = "Search"
+        searchBar.delegate = self
+        searchBar.enablesReturnKeyAutomatically = false
+        searchBar.autocorrectionType = .Yes
         navigationItem.titleView = searchBar
     }
     
+    // to show a `cancel` button in the search bar
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    // clear existing text and dismiss keyboard when `cancel` clicked
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+    
+    // respond to search action
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let resultVC = mainStoryboard.instantiateViewControllerWithIdentifier("resultVC") as! ResultViewController
+        // set parameters
+        if let keyword = searchBar.text {
+            resultVC.keyword = keyword
+        }
+        if let location = pickedLocation {
+            resultVC.location = location
+        }
+        
+        // present the search result VC in a navigation VC
+        let navigationVC = UINavigationController(rootViewController: resultVC)
+        presentViewController(navigationVC, animated: true, completion: nil)
+    }
+    
     func locationButtonClicked() {
-        let center = CLLocationCoordinate2DMake(37.788204, -122.411937)
+        let center = CLLocationCoordinate2DMake(37.3356461, -121.8855007)
         let northEast = CLLocationCoordinate2DMake(center.latitude + 0.001, center.longitude + 0.001)
         let southWest = CLLocationCoordinate2DMake(center.latitude - 0.001, center.longitude - 0.001)
         let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
@@ -94,10 +134,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
                 } else {
                     self.addressLabel.text = ""
                 }
-                
+                self.pickedLocation = "\(place.coordinate.latitude),\(place.coordinate.longitude)"
                 
             } else {
-                self.nameLabel.text = "No place selected"
+                //self.nameLabel.text = "No place selected"
                 self.addressLabel.text = ""
             }
         })

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A132130669C4B5BA29C9C21 /* Pods_Restaurant_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79658D5359BFE9788BD6BB74 /* Pods_Restaurant_Finder.framework */; };
+		AC3E51431CEFD91800D9BB8C /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51411CEFD91800D9BB8C /* Business.swift */; };
+		AC3E51441CEFD91800D9BB8C /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51421CEFD91800D9BB8C /* YelpClient.swift */; };
+		AC3E51461CEFDCD000D9BB8C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51451CEFDCD000D9BB8C /* ResultViewController.swift */; };
+		AC3E51481CEFDE4E00D9BB8C /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51471CEFDE4E00D9BB8C /* BusinessCell.swift */; };
 		AC4EFCBB1CEFA7AE00B7BE33 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EFCBA1CEFA7AE00B7BE33 /* SearchViewController.swift */; };
 		AC4EFCBD1CEFA7D400B7BE33 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EFCBC1CEFA7D400B7BE33 /* FavoriteViewController.swift */; };
 		AC6D804F1CE696D000CB577C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D804E1CE696D000CB577C /* AppDelegate.swift */; };
@@ -21,6 +25,10 @@
 		01F85A6FBF19B87D4ADFD8D1 /* Pods-Restaurant Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant Finder/Pods-Restaurant Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		79658D5359BFE9788BD6BB74 /* Pods_Restaurant_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurant_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA3327DDA2CC1BAADB10A7C /* Pods-Restaurant Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant Finder/Pods-Restaurant Finder.release.xcconfig"; sourceTree = "<group>"; };
+		AC3E51411CEFD91800D9BB8C /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		AC3E51421CEFD91800D9BB8C /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
+		AC3E51451CEFDCD000D9BB8C /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		AC3E51471CEFDE4E00D9BB8C /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		AC4EFCBA1CEFA7AE00B7BE33 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AC4EFCBC1CEFA7D400B7BE33 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		AC6D804B1CE696D000CB577C /* Restaurant Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +61,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AC3E51401CEFD8EF00D9BB8C /* yelp */ = {
+			isa = PBXGroup;
+			children = (
+				AC3E51411CEFD91800D9BB8C /* Business.swift */,
+				AC3E51421CEFD91800D9BB8C /* YelpClient.swift */,
+			);
+			name = yelp;
+			sourceTree = "<group>";
+		};
 		AC6D80421CE696D000CB577C = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +91,13 @@
 		AC6D804D1CE696D000CB577C /* Restaurant Finder */ = {
 			isa = PBXGroup;
 			children = (
+				AC3E51471CEFDE4E00D9BB8C /* BusinessCell.swift */,
 				AC6D804E1CE696D000CB577C /* AppDelegate.swift */,
 				AC6D80501CE696D000CB577C /* ViewController.swift */,
 				AC6D80521CE696D000CB577C /* Main.storyboard */,
 				AC4EFCBA1CEFA7AE00B7BE33 /* SearchViewController.swift */,
+				AC3E51451CEFDCD000D9BB8C /* ResultViewController.swift */,
+				AC3E51401CEFD8EF00D9BB8C /* yelp */,
 				AC4EFCBC1CEFA7D400B7BE33 /* FavoriteViewController.swift */,
 				AC6D80551CE696D000CB577C /* Assets.xcassets */,
 				AC6D80571CE696D000CB577C /* LaunchScreen.storyboard */,
@@ -218,8 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4EFCBB1CEFA7AE00B7BE33 /* SearchViewController.swift in Sources */,
+				AC3E51481CEFDE4E00D9BB8C /* BusinessCell.swift in Sources */,
 				AC6D80511CE696D000CB577C /* ViewController.swift in Sources */,
+				AC3E51461CEFDCD000D9BB8C /* ResultViewController.swift in Sources */,
 				AC4EFCBD1CEFA7D400B7BE33 /* FavoriteViewController.swift in Sources */,
+				AC3E51431CEFD91800D9BB8C /* Business.swift in Sources */,
+				AC3E51441CEFD91800D9BB8C /* YelpClient.swift in Sources */,
 				AC6D804F1CE696D000CB577C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
