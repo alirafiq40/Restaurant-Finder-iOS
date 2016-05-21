@@ -16,15 +16,33 @@ class Business: NSObject {
     let distance: String?
     let ratingImageURL: NSURL?
     let reviewCount: NSNumber?
+    let snippetURL: NSURL?
+    let snippetText: String?
+    let phone: String?
+    let googleStaticMapURL: String?
+    let rating: String?
     
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
+        snippetText = dictionary["snippet_text"] as? String
+        rating = String(dictionary["rating"] as! Double)
         
         let imageURLString = dictionary["image_url"] as? String
         if imageURLString != nil {
             imageURL = NSURL(string: imageURLString!)!
         } else {
             imageURL = nil
+        }
+        if let snippet = dictionary["snippet_image_url"] as? String {
+            snippetURL = NSURL(string: snippet)
+        } else {
+            snippetURL = nil
+        }
+        
+        if let phoneStr = dictionary["phone"] as? String {
+            phone = phoneStr
+        } else {
+            phone = nil
         }
         
         let location = dictionary["location"] as? NSDictionary
@@ -44,6 +62,15 @@ class Business: NSObject {
             }
         }
         self.address = address
+        
+        let coordinate = Util.forwardGeocoding(address)
+        if coordinate.count == 2 {
+            let latitude = coordinate[0]
+            let longitude = coordinate[1]
+            googleStaticMapURL = "http://maps.google.com/maps/api/staticmap?markers=color:blue|\(latitude),\(longitude)&zoom=13&size=600x400&sensor=true"
+        } else {
+            googleStaticMapURL = "http://maps.google.com/maps/api/staticmap?markers=color:blue|37.3356461,-121.8855007&zoom=13&size=600x400&sensor=true"
+        }
         
         let categoriesArray = dictionary["categories"] as? [[String]]
         if categoriesArray != nil {

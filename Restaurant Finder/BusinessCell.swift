@@ -12,6 +12,8 @@ import UIKit
 
 class BusinessCell: UITableViewCell {
     
+    @IBOutlet var ratingLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ratingImage: UIImageView!

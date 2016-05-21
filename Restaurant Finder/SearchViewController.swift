@@ -16,7 +16,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     var placePicker: GMSPlacePicker?
     var nameLabel = UILabel()
     var addressLabel = UILabel()
-    var pickedLocation: String?
+    var longitude = "-121.8855007"
+    var latitude = "37.3356461"
     
     override func loadView() {
         super.loadView()
@@ -104,9 +105,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         if let keyword = searchBar.text {
             resultVC.keyword = keyword
         }
-        if let location = pickedLocation {
-            resultVC.location = location
-        }
+        resultVC.latitude = latitude
+        resultVC.longitude = longitude
         
         // present the search result VC in a navigation VC
         let navigationVC = UINavigationController(rootViewController: resultVC)
@@ -134,7 +134,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
                 } else {
                     self.addressLabel.text = ""
                 }
-                self.pickedLocation = "\(place.coordinate.latitude),\(place.coordinate.longitude)"
+                self.latitude = "\(place.coordinate.latitude)"
+                self.longitude = "\(place.coordinate.longitude)"
                 
             } else {
                 //self.nameLabel.text = "No place selected"

@@ -16,7 +16,8 @@ class ResultViewController: UITableViewController {
     // for query parameters
     var keyword: String = ""
     var sortMode: YelpSortMode = .Distance
-    var location: String?
+    var longitude: String!
+    var latitude: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,8 @@ class ResultViewController: UITableViewController {
         
         
         // start the search
-        if let location = location {
-            YelpClient.sharedInstance.location = location
-        }
+        YelpClient.sharedInstance.location = latitude + "," + longitude
+            
         Business.searchWithTerm(keyword, sort: sortMode, categories: [], deals: false) { (businesses: [Business]!, error: NSError!) -> Void in
             
             progressBar.stopAnimation()
@@ -54,6 +54,10 @@ class ResultViewController: UITableViewController {
         
         cell.nameLabel.text = business.name
         cell.addressLabel.text = business.address
+        Util.downloadImage(business.imageURL!, imageView: cell.businessImage)
+        Util.downloadImage(business.ratingImageURL!, imageView: cell.ratingImage)
+        cell.ratingLabel.text = business.rating
+        cell.distanceLabel.text = business.distance
         
         return cell
     }
@@ -61,5 +65,16 @@ class ResultViewController: UITableViewController {
     // method to dismiss this view itself, called when `done` button clicked
     func dismissSelf() {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+        
+    // pass the selected UITableViewCell to the detail VC so info can be displayed
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailSegue" {
+            let index = tableView.indexPathForSelectedRow
+            let cell = tableView.cellForRowAtIndexPath(index!) as! BusinessCell
+            let vc = segue.destinationViewController as! DetailViewController
+            
+            
+        }
     }
 }

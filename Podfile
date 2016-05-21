@@ -10,4 +10,5 @@ target 'Restaurant Finder' do
   pod 'AFNetworking', '~> 2.5'
   pod 'BDBOAuth1Manager'
   pod 'LinearProgressBar', :git => 'https://github.com/PhilippeBoisney/LinearProgressBar.git'
+  pod 'DOFavoriteButton'
 end

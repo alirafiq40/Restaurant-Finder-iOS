@@ -12,6 +12,8 @@
 		AC3E51441CEFD91800D9BB8C /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51421CEFD91800D9BB8C /* YelpClient.swift */; };
 		AC3E51461CEFDCD000D9BB8C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51451CEFDCD000D9BB8C /* ResultViewController.swift */; };
 		AC3E51481CEFDE4E00D9BB8C /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51471CEFDE4E00D9BB8C /* BusinessCell.swift */; };
+		AC3E514A1CF00CB400D9BB8C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E51491CF00CB400D9BB8C /* DetailViewController.swift */; };
+		AC3E514C1CF00E3400D9BB8C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E514B1CF00E3400D9BB8C /* Util.swift */; };
 		AC4EFCBB1CEFA7AE00B7BE33 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EFCBA1CEFA7AE00B7BE33 /* SearchViewController.swift */; };
 		AC4EFCBD1CEFA7D400B7BE33 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EFCBC1CEFA7D400B7BE33 /* FavoriteViewController.swift */; };
 		AC6D804F1CE696D000CB577C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D804E1CE696D000CB577C /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 		AC3E51421CEFD91800D9BB8C /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		AC3E51451CEFDCD000D9BB8C /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AC3E51471CEFDE4E00D9BB8C /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		AC3E51491CF00CB400D9BB8C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AC3E514B1CF00E3400D9BB8C /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		AC4EFCBA1CEFA7AE00B7BE33 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AC4EFCBC1CEFA7D400B7BE33 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		AC6D804B1CE696D000CB577C /* Restaurant Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,8 @@
 				AC6D80521CE696D000CB577C /* Main.storyboard */,
 				AC4EFCBA1CEFA7AE00B7BE33 /* SearchViewController.swift */,
 				AC3E51451CEFDCD000D9BB8C /* ResultViewController.swift */,
+				AC3E514B1CF00E3400D9BB8C /* Util.swift */,
+				AC3E51491CF00CB400D9BB8C /* DetailViewController.swift */,
 				AC3E51401CEFD8EF00D9BB8C /* yelp */,
 				AC4EFCBC1CEFA7D400B7BE33 /* FavoriteViewController.swift */,
 				AC6D80551CE696D000CB577C /* Assets.xcassets */,
@@ -237,12 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3E514A1CF00CB400D9BB8C /* DetailViewController.swift in Sources */,
 				AC4EFCBB1CEFA7AE00B7BE33 /* SearchViewController.swift in Sources */,
 				AC3E51481CEFDE4E00D9BB8C /* BusinessCell.swift in Sources */,
 				AC6D80511CE696D000CB577C /* ViewController.swift in Sources */,
 				AC3E51461CEFDCD000D9BB8C /* ResultViewController.swift in Sources */,
 				AC4EFCBD1CEFA7D400B7BE33 /* FavoriteViewController.swift in Sources */,
 				AC3E51431CEFD91800D9BB8C /* Business.swift in Sources */,
+				AC3E514C1CF00E3400D9BB8C /* Util.swift in Sources */,
 				AC3E51441CEFD91800D9BB8C /* YelpClient.swift in Sources */,
 				AC6D804F1CE696D000CB577C /* AppDelegate.swift in Sources */,
 			);
