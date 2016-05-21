@@ -38,5 +38,11 @@
 	</array>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>Restaurant Finder needs to access your current location.</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!--Include to allow all connections (DANGER)-->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

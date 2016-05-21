@@ -19,8 +19,10 @@ class Business: NSObject {
     let snippetURL: NSURL?
     let snippetText: String?
     let phone: String?
-    let googleStaticMapURL: String?
+    let googleStaticMapURL: NSURL?
     let rating: String?
+    let latitude: String
+    let longitude: String
     
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
@@ -39,7 +41,7 @@ class Business: NSObject {
             snippetURL = nil
         }
         
-        if let phoneStr = dictionary["phone"] as? String {
+        if let phoneStr = dictionary["display_phone"] as? String {
             phone = phoneStr
         } else {
             phone = nil
@@ -60,17 +62,22 @@ class Business: NSObject {
                 }
                 address += neighborhoods![0] as! String
             }
+            
+            let coordinate = location!["coordinate"] as? NSDictionary
+            let latitude = String(coordinate!["latitude"] as! NSNumber)
+            let longitude = String(coordinate!["longitude"] as! NSNumber)
+            self.latitude = latitude
+            self.longitude = longitude
+        } else {
+            latitude = ""
+            longitude = ""
         }
         self.address = address
         
-        let coordinate = Util.forwardGeocoding(address)
-        if coordinate.count == 2 {
-            let latitude = coordinate[0]
-            let longitude = coordinate[1]
-            googleStaticMapURL = "http://maps.google.com/maps/api/staticmap?markers=color:blue|\(latitude),\(longitude)&zoom=13&size=600x400&sensor=true"
-        } else {
-            googleStaticMapURL = "http://maps.google.com/maps/api/staticmap?markers=color:blue|37.3356461,-121.8855007&zoom=13&size=600x400&sensor=true"
-        }
+        //let coordinate = Util.forwardGeocoding(address)
+        //googleStaticMapURL = NSURL(string: "http://maps.google.com/maps/api/staticmap?markers=color:blue|\(latitude!),\(longitude!)&zoom=13&size=600x400&sensor=true")
+        googleStaticMapURL = NSURL(string: "https://maps.googleapis.com/maps/api/staticmap?center=\(latitude),\(longitude)&zoom=17&size=600x400&maptype=roadmap&markers=color:red%7C\(latitude),\(longitude)")
+        //print("google static map url: \(googleStaticMapURL)")
         
         let categoriesArray = dictionary["categories"] as? [[String]]
         if categoriesArray != nil {

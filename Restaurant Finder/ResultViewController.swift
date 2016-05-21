@@ -74,7 +74,8 @@ class ResultViewController: UITableViewController {
             let cell = tableView.cellForRowAtIndexPath(index!) as! BusinessCell
             let vc = segue.destinationViewController as! DetailViewController
             
-            
+            vc.business = businesses[index!.row]
+            vc.cell = cell
         }
     }
 }
