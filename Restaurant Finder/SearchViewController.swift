@@ -13,6 +13,7 @@ import GoogleMaps
 class SearchViewController: UIViewController, UISearchBarDelegate {
     
     let searchBar = UISearchBar()
+    let segmentedControl = UISegmentedControl(items: ["By Distance", "By Relevance"])
     var placePicker: GMSPlacePicker?
     var nameLabel = UILabel()
     var addressLabel = UILabel()
@@ -23,7 +24,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         super.loadView()
         
         // add segmented control
-        let segmentedControl = UISegmentedControl(items: ["By Distance", "By Relevance"])
         segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -107,6 +107,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         }
         resultVC.latitude = latitude
         resultVC.longitude = longitude
+        
+        if segmentedControl.selectedSegmentIndex != 0 {
+            resultVC.sortMode = YelpSortMode.BestMatched
+        }
         
         // present the search result VC in a navigation VC
         let navigationVC = UINavigationController(rootViewController: resultVC)

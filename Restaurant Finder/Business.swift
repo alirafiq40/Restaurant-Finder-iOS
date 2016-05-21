@@ -76,7 +76,7 @@ class Business: NSObject {
         
         //let coordinate = Util.forwardGeocoding(address)
         //googleStaticMapURL = NSURL(string: "http://maps.google.com/maps/api/staticmap?markers=color:blue|\(latitude!),\(longitude!)&zoom=13&size=600x400&sensor=true")
-        googleStaticMapURL = NSURL(string: "https://maps.googleapis.com/maps/api/staticmap?center=\(latitude),\(longitude)&zoom=17&size=600x400&maptype=roadmap&markers=color:red%7C\(latitude),\(longitude)")
+        googleStaticMapURL = NSURL(string: "https://maps.googleapis.com/maps/api/staticmap?center=\(latitude),\(longitude)&zoom=19&size=600x400&maptype=roadmap&markers=color:red%7C\(latitude),\(longitude)")
         //print("google static map url: \(googleStaticMapURL)")
         
         let categoriesArray = dictionary["categories"] as? [[String]]

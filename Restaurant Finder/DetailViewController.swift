@@ -43,7 +43,9 @@ class DetailViewController: UIViewController {
         Util.downloadImage(business.snippetURL!, imageView: snippetImageView)
         print(business.snippetURL)
         Util.downloadImage(business.googleStaticMapURL!, imageView: googleStaticImageView)
-        snippetLabel.text = "\"\(business.snippetText!)\""
+        var snippet = business.snippetText!.stringByReplacingOccurrencesOfString("\n", withString: " ")
+        snippet = snippet.substringToIndex(snippet.startIndex.advancedBy(70))
+        snippetLabel.text = "\"\(snippet)...\""
         
         distanceLabel.text = business.distance
         phoneLabel.text = business.phone
