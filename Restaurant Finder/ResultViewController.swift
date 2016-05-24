@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import LinearProgressBar
+import Parse
 
 class ResultViewController: UITableViewController {
     var businesses: [Business] = []
@@ -73,8 +74,25 @@ class ResultViewController: UITableViewController {
             let index = tableView.indexPathForSelectedRow
             let cell = tableView.cellForRowAtIndexPath(index!) as! BusinessCell
             let vc = segue.destinationViewController as! DetailViewController
+            let b = businesses[index!.row]
             
-            vc.business = businesses[index!.row]
+            let query = PFQuery(className:"FavoriteRestaurant")
+            query.fromLocalDatastore()
+            query.whereKey("name", equalTo: b.name!)
+            query.findObjectsInBackgroundWithBlock {
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    print("Retrieved \(objects!.count) objects from local db")
+                    if objects?.count > 0 {
+                        vc.object = objects![0]
+                        vc.isFavorite = true
+                    } else {
+                        vc.isFavorite = false
+                    }
+                }
+            }
+            
+            vc.business = b
             vc.cell = cell
         }
     }

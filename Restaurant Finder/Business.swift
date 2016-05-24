@@ -24,6 +24,23 @@ class Business: NSObject {
     let latitude: String
     let longitude: String
     
+    init(name: String, address: String, imageURL: String, ratingImageURL: String, reviewCount: NSNumber, snippetURL: String, snippetText: String, phone: String, googleStaticMapURL: String, rating: String, latitude: String, longitude: String) {
+        self.name = name
+        self.address = address
+        self.imageURL = NSURL(string: imageURL)
+        self.categories = nil
+        self.distance = ""
+        self.ratingImageURL = NSURL(string: ratingImageURL)
+        self.reviewCount = reviewCount
+        self.snippetURL = NSURL(string: snippetURL)
+        self.snippetText = snippetText
+        self.phone = phone
+        self.googleStaticMapURL = NSURL(string: googleStaticMapURL)
+        self.rating = rating
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+    
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
         snippetText = dictionary["snippet_text"] as? String

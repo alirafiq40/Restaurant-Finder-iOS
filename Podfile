@@ -11,4 +11,5 @@ target 'Restaurant Finder' do
   pod 'BDBOAuth1Manager'
   pod 'LinearProgressBar', :git => 'https://github.com/PhilippeBoisney/LinearProgressBar.git'
   pod 'Parse'
+  pod 'Notie'
 end

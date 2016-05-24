@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VOQ-Ow-PmH" id="V6r-bD-4DR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jcA-nt-xWk">
@@ -293,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30I-WF-eXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971.5" y="-606.5"/>
+            <point key="canvasLocation" x="2003.5" y="-327.5"/>
         </scene>
         <!--Search-->
         <scene sceneID="5ao-M6-Eo4">
@@ -312,7 +312,7 @@
             </objects>
             <point key="canvasLocation" x="439.5" y="-606.5"/>
         </scene>
-        <!--Favorite-->
+        <!--Favorite View Controller-->
         <scene sceneID="tb1-cU-0Ob">
             <objects>
                 <tableViewController id="HfH-zm-qcc" customClass="FavoriteViewController" customModule="Restaurant_Finder" customModuleProvider="target" sceneMemberID="viewController">
@@ -322,10 +322,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="86" id="Cb7-3E-ZOW" customClass="BusinessCell" customModule="Restaurant_Finder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="86"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cb7-3E-ZOW" id="7Ob-z5-Ulk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H92-oR-VIM">
@@ -412,6 +412,7 @@
                                     <outlet property="nameLabel" destination="8vO-dE-6LM" id="PlO-Qa-xNk"/>
                                     <outlet property="ratingImage" destination="5yi-st-2Kg" id="YNs-VO-OtL"/>
                                     <outlet property="ratingLabel" destination="f3q-be-TXI" id="vQX-ES-R56"/>
+                                    <segue destination="LoZ-p2-lMe" kind="show" identifier="favSegue" id="XFX-Pu-Da2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -420,12 +421,12 @@
                             <outlet property="delegate" destination="HfH-zm-qcc" id="lI9-zi-p9e"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorite" image="Christmas Star-50" id="4Qc-bG-A1M"/>
+                    <navigationItem key="navigationItem" id="BOV-Gu-71b"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="StT-Y3-stc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439.5" y="168.5"/>
+            <point key="canvasLocation" x="1026.5" y="168.5"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="xKi-vo-cRM">
@@ -470,12 +471,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="h0G-AP-jeQ" kind="relationship" relationship="viewControllers" id="sZo-gC-t3B"/>
-                        <segue destination="HfH-zm-qcc" kind="relationship" relationship="viewControllers" id="Rm2-Ag-MW0"/>
+                        <segue destination="u22-u9-FsX" kind="relationship" relationship="viewControllers" id="Rm2-Ag-MW0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RF3-ZX-JA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-136" y="-327"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="HKj-TZ-9kH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u22-u9-FsX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorite" image="Christmas Star-50" id="4Qc-bG-A1M"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BsG-XF-1xu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HfH-zm-qcc" kind="relationship" relationship="rootViewController" id="yDf-Bo-rnl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwt-tC-DWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439.5" y="168.5"/>
         </scene>
     </scenes>
     <resources>
@@ -484,4 +504,7 @@
         <image name="food-icons" width="202" height="300"/>
         <image name="star" width="42" height="42"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qcU-kw-xKR"/>
+    </inferredMetricsTieBreakers>
 </document>

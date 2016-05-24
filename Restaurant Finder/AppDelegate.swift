@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         Parse.enableLocalDatastore()
+
+        Parse.setApplicationId("myAppId", clientKey: "myMasterKey")
         
         // API key for Google place picker
         GMSServices.provideAPIKey("AIzaSyA-5G8jsEpRer_46c-8xJ_SmhVMZMEnqJw")

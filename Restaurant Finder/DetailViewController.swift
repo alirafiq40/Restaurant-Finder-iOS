@@ -14,6 +14,14 @@ class DetailViewController: UIViewController {
     var business: Business!
     var cell: BusinessCell?
     var object: PFObject?
+    var isFromFavorite: Bool?
+    var isFavorite: Bool? {
+        didSet {
+            if isFavorite! {
+                favButton.select()
+            }
+        }
+    }
     
     @IBOutlet var googleStaticImageView: UIImageView!
     @IBOutlet var snippetLabel: UILabel!
@@ -31,19 +39,29 @@ class DetailViewController: UIViewController {
     @IBAction func favButtonClicked(sender: DOFavoriteButton) {
         if sender.selected {
             // deselect
+            isFavorite = false
             sender.deselect()
         } else {
             // select with animation
+            isFavorite = true
             sender.select()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let fav = isFromFavorite {
+            if fav {
+                isFavorite = true
+            }
+        } else {
+            isFavorite = false
+        }
         
         navigationItem.title = business.name
         
         Util.downloadImage(business.snippetURL!, imageView: snippetImageView)
-        print(business.snippetURL)
         Util.downloadImage(business.googleStaticMapURL!, imageView: googleStaticImageView)
         var snippet = business.snippetText!.stringByReplacingOccurrencesOfString("\n", withString: " ")
         snippet = snippet.substringToIndex(snippet.startIndex.advancedBy(70))
@@ -63,22 +81,39 @@ class DetailViewController: UIViewController {
         addressLabel.text = business.address
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // to hide the tab bar
+        self.tabBarController?.tabBar.hidden = true
+    }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-//        if favButton.selected {
-//            if !favedBy.contains(userEmail) {
-//                favedBy.append(userEmail)
-//                objRef["favedBy"] = favedBy
-//                objRef.saveInBackground()
-//            }
-//        }
-//        else {
-//            if favedBy.contains(userEmail) {
-//                favedBy.removeAtIndex(favedBy.indexOf(userEmail)!)
-//                objRef["favedBy"] = favedBy
-//                objRef.saveInBackground()
-//            }
-//        }
+        if isFavorite! {
+            if object == nil {
+                let object = PFObject(className:"FavoriteRestaurant")
+                object["name"] = business.name
+                object["address"] = business.address
+                object["imageURL"] = business.imageURL?.absoluteString
+                object["ratingImageURL"] = business.ratingImageURL?.absoluteString
+                object["reviewCount"] = business.reviewCount
+                object["snippetURL"] = business.snippetURL?.absoluteString
+                object["snippetText"] = business.snippetText
+                object["phone"] = business.phone
+                object["googleStaticMapURL"] = business.googleStaticMapURL?.absoluteString
+                object["rating"] = business.rating
+                object["latitude"] = business.latitude
+                object["longitude"] = business.longitude
+                
+                object.pinInBackground()
+            }
+        }
+        else {
+            if let object = object {
+                print("unpinning")
+                object.unpinInBackground()
+            }
+        }
     }
 }

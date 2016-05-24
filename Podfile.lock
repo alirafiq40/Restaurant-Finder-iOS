@@ -26,6 +26,7 @@ PODS:
   - Bolts/Tasks (1.7.0)
   - GoogleMaps (1.13.2)
   - LinearProgressBar (1.0.0)
+  - Notie (1.0.4)
   - Parse (1.13.0):
     - Bolts/Tasks (~> 1.6)
 
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - BDBOAuth1Manager
   - GoogleMaps
   - LinearProgressBar (from `https://github.com/PhilippeBoisney/LinearProgressBar.git`)
+  - Notie
   - Parse
 
 EXTERNAL SOURCES:
@@ -51,8 +53,9 @@ SPEC CHECKSUMS:
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
   LinearProgressBar: 11866ed667d95172ca5e966f816119c7a9d65833
+  Notie: 1acc7a2dd65b7ddbecd0d7bff0f71ef83df11caf
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
 
-PODFILE CHECKSUM: e10f1153145816d364efabf447ecc9f8ca53e038
+PODFILE CHECKSUM: 244fadf5530b386eeafca008ac493ee8529635ef
 
 COCOAPODS: 1.0.0
