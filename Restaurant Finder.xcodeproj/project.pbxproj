@@ -22,6 +22,8 @@
 		AC6D80541CE696D000CB577C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6D80521CE696D000CB577C /* Main.storyboard */; };
 		AC6D80561CE696D000CB577C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6D80551CE696D000CB577C /* Assets.xcassets */; };
 		AC6D80591CE696D000CB577C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6D80571CE696D000CB577C /* LaunchScreen.storyboard */; };
+		ACA9D2E41CF4D8C3001291CC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA9D2E21CF4D8C3001291CC /* libsqlite3.dylib */; };
+		ACA9D2E51CF4D8DC001291CC /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA9D2E11CF4D8C3001291CC /* libz.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		AC6D80551CE696D000CB577C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC6D80581CE696D000CB577C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC6D805A1CE696D000CB577C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA9D2E11CF4D8C3001291CC /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		ACA9D2E21CF4D8C3001291CC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA9D2E51CF4D8DC001291CC /* libz.1.dylib in Frameworks */,
+				ACA9D2E41CF4D8C3001291CC /* libsqlite3.dylib in Frameworks */,
 				0A132130669C4B5BA29C9C21 /* Pods_Restaurant_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +132,8 @@
 		BBDF7C54399B3473EA0E1B27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACA9D2E11CF4D8C3001291CC /* libz.1.dylib */,
+				ACA9D2E21CF4D8C3001291CC /* libsqlite3.dylib */,
 				79658D5359BFE9788BD6BB74 /* Pods_Restaurant_Finder.framework */,
 			);
 			name = Frameworks;

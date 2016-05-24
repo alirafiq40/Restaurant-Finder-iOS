@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class DetailViewController: UIViewController {
     var business: Business!
     var cell: BusinessCell?
+    var object: PFObject?
     
     @IBOutlet var googleStaticImageView: UIImageView!
     @IBOutlet var snippetLabel: UILabel!
@@ -59,5 +61,24 @@ class DetailViewController: UIViewController {
         }
         nameLabel.text = business.name
         addressLabel.text = business.address
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+//        if favButton.selected {
+//            if !favedBy.contains(userEmail) {
+//                favedBy.append(userEmail)
+//                objRef["favedBy"] = favedBy
+//                objRef.saveInBackground()
+//            }
+//        }
+//        else {
+//            if favedBy.contains(userEmail) {
+//                favedBy.removeAtIndex(favedBy.indexOf(userEmail)!)
+//                objRef["favedBy"] = favedBy
+//                objRef.saveInBackground()
+//            }
+//        }
     }
 }
