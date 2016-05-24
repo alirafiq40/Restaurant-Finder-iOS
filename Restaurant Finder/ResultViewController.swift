@@ -36,7 +36,6 @@ class ResultViewController: UITableViewController {
         
         // start the search
         YelpClient.sharedInstance.location = latitude + "," + longitude
-            
         Business.searchWithTerm(keyword, sort: sortMode, categories: [], deals: false) { (businesses: [Business]!, error: NSError!) -> Void in
             
             progressBar.stopAnimation()

@@ -99,7 +99,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     // respond to search action
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
-        searchBar.text = ""
         searchBar.resignFirstResponder()
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
@@ -118,6 +117,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         // present the search result VC in a navigation VC
         let navigationVC = UINavigationController(rootViewController: resultVC)
         presentViewController(navigationVC, animated: true, completion: nil)
+        searchBar.text = ""
     }
     
     func locationButtonClicked() {
