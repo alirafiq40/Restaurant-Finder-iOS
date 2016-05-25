@@ -149,8 +149,8 @@ class FavoriteViewController: UITableViewController {
             
             let objToDelete = businessObjects[indexPath.row]
             
-            let title = "Delete Post"
-            let message = "Are you sure you want to delete this favorite restaurant?"
+            let title = "Remove from favorites"
+            let message = "Are you sure you want to remove this favorite restaurant?"
             let ac = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
