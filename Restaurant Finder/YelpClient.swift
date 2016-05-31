@@ -12,10 +12,10 @@ import AFNetworking
 import BDBOAuth1Manager
 
 // You can register for Yelp API keys here: http://www.yelp.com/developers/manage_api_keys
-let yelpConsumerKey = "22cAV1f1i3chwFilRB58iw"
-let yelpConsumerSecret = "WE4up2SBLbaPUtf7wz9G9lMkreo"
-let yelpToken = "W8Axgi5B3cKArD5CEItr0bx-bdqLsXEg"
-let yelpTokenSecret = "Dczbvw4NEvNYzDXvftkPkAvg47s"
+let yelpConsumerKey = "TO_REPLACE"
+let yelpConsumerSecret = "TO_REPLACE"
+let yelpToken = "TO_REPLACE"
+let yelpTokenSecret = "TO_REPLACE"
 
 enum YelpSortMode: Int {
     case BestMatched = 0, Distance, HighestRated
