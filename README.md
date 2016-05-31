@@ -5,9 +5,9 @@ Made with ❤️.
 
 ---
 
-[CocoaPods](https://cocoapods.org/) is used for dependency management.
-
 ### Instructions
+
+[CocoaPods](https://cocoapods.org/) is used for dependency management.
 
 To run this project, CocoaPods should be first installed. CocoaPods is built with Ruby and is installable with the default Ruby available on OS X. To install, issue in terminal:
 
